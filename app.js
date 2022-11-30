@@ -1,41 +1,41 @@
-let img__slider = document.getElementsByClassName('imgSlider');
+let imgSlider = document.getElementsByClassName('imgSlider');
 
 let etape = 0;
 
-let nbr__img = img__slider.length;
+let nbrImg = imgSlider.length;
 
 let precedent = document.querySelector('.precedent');
 let suivant = document.querySelector('.suivant');
 
 function enleverActiveImages() {
-    for(let i = 0 ; i < nbr__img ; i++) {
-        img__slider[i].classList.remove('active');
+    for(let i = 0 ; i < nbrImg ; i++) {
+        imgSlider[i].classList.remove('active');
     }
 }
 
 suivant.addEventListener('click', function() {
     etape++;
-    if(etape >= nbr__img) {
+    if(etape >= nbrImg) {
         etape = 0;
     }
     enleverActiveImages();
-    img__slider[etape].classList.add('active');
+    imgSlider[etape].classList.add('active');
 })
 
 precedent.addEventListener('click', function() {
     etape--;
     if(etape < 0) {
-        etape = nbr__img - 1;
+        etape = nbrImg - 1;
     }
     enleverActiveImages();
-    img__slider[etape].classList.add('active');
+    imgSlider[etape].classList.add('active');
 })
 
-setInterval(function() {
-    etape++;
-    if(etape >= nbr__img) {
-        etape = 0;
-    }
-    enleverActiveImages();
-    img__slider[etape].classList.add('active');
-}, 3000)
+//setInterval(function() {
+ //   etape++;
+ //   if(etape >= nbrImg) {
+//        etape = 0;
+//    }
+//    enleverActiveImages();
+//    imgSlider[etape].classList.add('active');
+//}, 3000)
