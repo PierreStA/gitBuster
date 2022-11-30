@@ -8,6 +8,7 @@ ul {
     margin: 0;
 }
 
+
 body{
     display:flex;
     flex-direction: column;
@@ -48,4 +49,19 @@ body{
 
 .precedent {
     left: 1rem;
+
+:root{
+--backgroundImg:
+
+--button-color:
+
+
+--font-family-h1: 'Philosopher', sans-serif;
+
+--font-family-p: 'Inter', sans-serif;
+
+--brown-color:
+
+
+
 }
