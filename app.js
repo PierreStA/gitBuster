@@ -1,4 +1,4 @@
-let img__slider = document.getElementsByClassName('img__slider');
+let img__slider = document.getElementsByClassName('imgSlider');
 
 let etape = 0;
 
