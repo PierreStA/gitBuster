@@ -51,16 +51,28 @@ body{
     left: 1rem;}
 
 :root{
---backgroundImg:
+--backgroundImg: url( "Background-image.jpg");
 
---button-color:
+--button-color: #839B97 ;
+--accent-color :#C6B497;
+--black-color: #0E0E0E;
+--white-color:#F5F5F5;
+--main-dark-color:#647A76;
+--accent-dark-color:#A6977D;
+--grey-1-color:#666666;
+--error-color:#FF5050;
+--main-light-color:#A8D2CB;
+--accent-light-color:#E4CDA9;
+--grey-2-color:#999999;
+--validation-color:#54A05C;
+--grey-3-color:#CCCCCC;
 
 
 --font-family-h1: 'Philosopher', sans-serif;
 
 --font-family-p: 'Inter', sans-serif;
 
---brown-color:
+
 
 
 
