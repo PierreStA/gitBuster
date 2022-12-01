@@ -1,79 +1,196 @@
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 body,
 li,
 ul {
-    margin: 0;
+  margin: 0;
 }
 
-
-body{
-    display:flex;
-    flex-direction: column;
+body {
+  display: flex;
+  flex-direction: column;
 }
 
 .slider {
-    height: 80vh;
-    position: relative;
+  height: 80vh;
+  position: relative;
 }
 
 .slider img {
-    object-fit: cover;
-    height: 100%;
-    width: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    opacity: 0;
-    transition: opacity .5s;
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transition: opacity 0.5s;
 }
 
 .slider img.active {
-    opacity: 1;
+  opacity: 1;
 }
 
-.suivant, .precedent {
-    color: #fff;
-    font-size: 6rem;
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    cursor: pointer;
+.suivant,
+.precedent {
+  color: #fff;
+  font-size: 6rem;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
 }
 
 .suivant {
-    right: 1rem;
+  right: 1rem;
 }
 
 .precedent {
-    left: 1rem;}
+  left: 1rem;
+}
 
-:root{
---backgroundImg: url( "Background-image.jpg");
+:root {
+  --backgroundImg: url("/Images/Background-image.jpg");
 
---button-color: #839B97 ;
---accent-color :#C6B497;
---black-color: #0E0E0E;
---white-color:#F5F5F5;
---main-dark-color:#647A76;
---accent-dark-color:#A6977D;
---grey-1-color:#666666;
---error-color:#FF5050;
---main-light-color:#A8D2CB;
---accent-light-color:#E4CDA9;
---grey-2-color:#999999;
---validation-color:#54A05C;
---grey-3-color:#CCCCCC;
+  --button-color: #839b97;
+  --accent-color: #c6b497;
+  --black-color: #0e0e0e;
+  --white-color: #f5f5f5;
+  --main-dark-color: #647a76;
+  --accent-dark-color: #a6977d;
+  --grey-1-color: #666666;
+  --error-color: #ff5050;
+  --main-light-color: #a8d2cb;
+  --accent-light-color: #e4cda9;
+  --grey-2-color: #999999;
+  --validation-color: #54a05c;
+  --grey-3-color: #cccccc;
 
+  --font-family-h1: "Philosopher", sans-serif;
 
---font-family-h1: 'Philosopher', sans-serif;
+  --font-family-p: "Inter", sans-serif;
+}
+.container {
+  height: 100%;
+}
 
---font-family-p: 'Inter', sans-serif;
+.profil-picture {
+  position: relative;
+  width: 100%;
+}
 
+.container-bottom {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  height: fit-content;
+  border-radius: 1.5rem;
+  padding: 2rem;
+  margin-top: -2rem;
+  background-image: var(--backgroundImg);
+}
 
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
 
+body {
+  font-family: var(--font-family-p);
+  font-size: 0.9rem;
+}
 
+h1,
+h2,
+h3 {
+  font-family: var(--font-family-h1);
+}
 
+h1 {
+  font-size: 1.5rem;
+}
+
+h2:nth-of-type(2) {
+  margin-top: 2rem;
+}
+
+p {
+  margin: 0 0 20px;
+  line-height: 1.5;
+}
+
+section {
+  display: none;
+  padding: 20px 0 0;
+  border-top: 1px solid #ddd;
+}
+
+input {
+  display: none;
+}
+
+label {
+  display: inline-flex;
+  margin: 0 0 -1px;
+  padding: 15px 25px;
+  font-weight: 600;
+  text-align: center;
+  color: #bbb;
+  border: 1px solid transparent;
+}
+
+label:hover {
+  color: #888;
+  cursor: pointer;
+}
+
+input:checked + label {
+  color: #555;
+  border: 1px solid #ddd;
+  border-top: 2px solid var(--accent-color);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.692);
+  border-radius: 0.2rem 0.2rem 0rem 0rem;
+}
+
+#tab1:checked ~ #content1,
+#tab2:checked ~ #content2,
+#tab3:checked ~ #content3 {
+  display: flex;
+  flex-direction: column;
+}
+
+footer {
+  text-align: center;
+  background-color: var(--accent-light-color);
+  padding: 0.5rem;
+  width: 100%;
+}
+
+.social-links {
+  display: flex;
+}
+
+.social-links a {
+  padding: 1rem;
+  margin-right: 1.5rem;
+  background-color: var(--button-color);
+  border-radius: 100%;
+}
+
+.social-links a:hover {
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+@media screen and (max-width: 650px) {
+  label {
+    font-size: 0.8rem;
+  }
+}
+@media screen and (max-width: 400px) {
+  label {
+    padding: 15px;
+  }
 }
