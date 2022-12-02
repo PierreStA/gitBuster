@@ -4,15 +4,21 @@
   "description": "Book of the Wilders",
   "main": "app.js",
   "scripts": {
-    "validate":   "html-validator docs/*.html flyer.html",
-      "one-folder": "html-validator docs",
-      "all":        "html-validator --quiet",
+
+
+    "validate":   "html-validator --quiet",  
     "test": "echo \"Error: no test specified\" && exit 1"
+
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/PierreStA/gitBuster.git"
   },
+
+
+
+  "keywords": [],
+
   "author": "",
   "license": "ISC",
   "bugs": {
@@ -22,4 +28,4 @@
   "devDependencies": {
     "w3c-html-validator": "^1.2.1"
   }
-}
+
