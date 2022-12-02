@@ -54,9 +54,10 @@
   .logo {
     display: flex;
     padding-top: 0.7rem;
+    background-color: #F5F5F5;
   }
   body {
-    font-family: var(--font-family-p);
+    font-family: var(--font-family-h1);
     font-size: 0.9rem;
   }
   
@@ -81,7 +82,7 @@ footer {
     z-index: 1;
     bottom: 0;
   }
-  
+
 .profile-container {
     display: flex;
     align-items: center;
@@ -109,10 +110,10 @@ footer {
 }
 
 .profile-icon {
-    height: 100px;
-    width: 100px;
+    height: 15rem;
+    width: 20rem;
     object-fit: cover;
-    border-radius: 50%;
+
 }
 
 .profile-name {
@@ -124,6 +125,7 @@ footer {
 .profile-position {
     font-size: 14px;
     color: #777;
+    font-family: var(--font-family-p);
 }
 
 .button {
