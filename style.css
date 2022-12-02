@@ -7,3 +7,71 @@ li,
 ul {
     margin: 0;
 }
+
+
+body{
+    display:flex;
+    flex-direction: column;
+}
+
+.slider {
+    height: 80vh;
+    position: relative;
+}
+
+.slider img {
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: opacity .5s;
+}
+
+.slider img.active {
+    opacity: 1;
+}
+
+.suivant, .precedent {
+    color: #fff;
+    font-size: 6rem;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+
+.suivant {
+    right: 1rem;
+}
+
+.precedent {
+    left: 1rem;}
+
+:root{
+--backgroundImg: url( "/Images/Background-image.jpg");
+
+--button-color: #839B97 ;
+--accent-color :#C6B497;
+--black-color: #0E0E0E;
+--white-color:#F5F5F5;
+--main-dark-color:#647A76;
+--accent-dark-color:#A6977D;
+--grey-1-color:#666666;
+--error-color:#FF5050;
+--main-light-color:#A8D2CB;
+--accent-light-color:#E4CDA9;
+--grey-2-color:#999999;
+--validation-color:#54A05C;
+--grey-3-color:#CCCCCC;
+
+
+--font-family-h1: 'Philosopher', sans-serif;
+
+--font-family-p: 'Inter', sans-serif;
+}
+
+
+  
