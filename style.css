@@ -51,7 +51,7 @@ body{
     left: 1rem;}
 
 :root{
---backgroundImg: url( "Background-image.jpg");
+--backgroundImg: url( "/Images/Background-image.jpg");
 
 --button-color: #839B97 ;
 --accent-color :#C6B497;
@@ -71,9 +71,7 @@ body{
 --font-family-h1: 'Philosopher', sans-serif;
 
 --font-family-p: 'Inter', sans-serif;
-
-
-
-
-
 }
+
+
+  
