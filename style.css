@@ -26,7 +26,7 @@
 
 main,
 body {
-  height: 100%;
+  /* height: 100%; */
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -365,13 +365,11 @@ input:checked + label {
 }
 
 footer {
-  position: absolute;
   text-align: center;
   background-color: var(--accent-light-color);
   padding: 0.5rem;
   width: 100%;
   z-index: 1;
-  bottom: 0;
 }
 
 .social-links {
