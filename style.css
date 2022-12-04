@@ -14,16 +14,20 @@
     --grey-2-color: #999999;
     --validation-color: #54a05c;
     --grey-3-color: #cccccc;
+    --shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   
     --font-family-h1: "Philosopher", sans-serif;
   
     --font-family-p: "Inter", sans-serif;
   }
   
+ 
+  
   * {
+    padding: 0;
+    margin: 0;
     box-sizing: border-box;
-  }
-
+}
   main,
   body {
     height: 100%;
@@ -39,6 +43,8 @@
   body {
     height: 100%;
     width: 100%;
+    font-family: var(--font-family-h1);
+    font-size: 1rem;
   }
   img {
     max-width: 100%;
@@ -51,38 +57,123 @@
     height: 5rem;
     background-color: #d9d9d9;
   }
-  .logo {
-    display: flex;
-    padding-top: 0.7rem;
-    background-color: #F5F5F5;
-  }
-  body {
-    font-family: var(--font-family-h1);
-    font-size: 0.9rem;
-  }
-  
-  main {
-    justify-items: center;
-  }
-  
 
-* {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
+  .logo {
+   float: left;
+   background-color: #F5F5F5;
+   height: 70px;
+   width: 100%;
+
+  }
+ 
+  
+ 
+main.projet {
+  max-width: 60%;
+  margin-block: 4rem;
+  margin-left: 12rem;
+  }
+
+#nav-desk-container {
+  width: 80%;
+  margin: 0 auto;
+  height: 100%;
 }
 
 
-footer {
-    position: absolute;
-    text-align: center;
-    background-color: var(--accent-light-color);
-    padding: 0.5rem;
-    width: 100%;
-    z-index: 1;
-    bottom: 0;
-  }
+.logo ul {
+ 
+  text-align: center;
+  display:inline-block;
+  vertical-align:top;
+}
 
+.logo li {
+  list-style-type: none;
+  padding: 0px;
+  height: 24px;
+  margin-top: 4px;
+  margin-bottom: 4px;
+  display: inline;
+}
+
+.logo li a {
+  color: black;
+  font-size: 16px;
+  font-family:  var(--font-family-p);
+  text-decoration: none;
+  line-height: 4rem;
+  padding: 0;
+  opacity: 0.7;
+}
+
+
+/*boutton repo*/
+.gitton {
+    font-family: var(--font-family-p);
+    font-weight: 500;
+    display: flex;
+    padding: 0.5rem 1rem;
+    justify-content: center;
+    margin-top: 1rem;
+    cursor: pointer;
+    border-radius: 2rem;
+    transition-duration: 0.4s;
+    background-color: var(--button-color);
+    border: 1px solid var(--button-color);
+    text-decoration: none;
+    align-items: center;
+  }
+  .gitton:active {
+    transform: scale(0.9);
+  }
+  .gitton:visited {
+    color: var(--black-color);
+  }
+  
+  .textButton {
+    margin: 0;
+    padding-left: 0.5rem;
+  }
+  
+  .gitton:hover {
+    box-shadow: var(--shadow);
+  }
+  
+  
+  p {
+    margin: 0 0 20px;
+    line-height: 1.5;
+  }
+  
+  input {
+    display: none;
+  }
+  
+  label {
+    display: inline-flex;
+    margin: 0 0 -1px;
+    padding: 15px 25px;
+    font-weight: 600;
+    text-align: center;
+    color: #bbb;
+    border: 1px solid transparent;
+  }
+  
+  label:hover {
+    color: #888;
+    cursor: pointer;
+  }
+  
+  input:checked + label {
+    color: #555;
+    border: 1px solid #ddd;
+    border-top: 2px solid var(--accent-color);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.692);
+    border-radius: 0.2rem 0.2rem 0rem 0rem;
+  }
+  
+ 
 .profile-container {
     display: flex;
     align-items: center;
@@ -99,7 +190,6 @@ footer {
     display: flex;
     flex-direction: column;
     align-items: center;
-    border-radius: 4px;
     box-shadow: 0 0 2px 0 #ccc;
     transition: .3s;
 }
@@ -120,6 +210,7 @@ footer {
     font-size: 24px;
     font-weight: bold;
     margin: 25px 0 10px 0;
+    text-align: center;
 }
 
 .profile-position {
@@ -134,7 +225,7 @@ footer {
     color: #999;
     text-decoration: none;
     border: 1px solid #999;
-    border-radius: 4px;
+    border-radius: 2rem;
 }
 
 .button:hover {
@@ -143,14 +234,21 @@ footer {
     border: 1px solid #839B97;
 }
 
+footer {
+  text-align: center;
+  background-color: var(--accent-light-color);
+  padding: 0.5rem;
+  width: 100%;
+  z-index: 1;
+}
 
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 1280px) {
     .profile-name {
         font-size: 18px;
     }
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 1280px) {
     .profile-card {
         padding: 20px 15px;
     }
