@@ -1,6 +1,8 @@
 let imgSlider = document.getElementsByClassName('imgSlider');
-
+const dev = document.querySelector(".devName");
 let etape = 0;
+const devName=['Antoine','Cassandra','Laura','David','Pierre'] ;
+changeName()
 
 let nbrImg = imgSlider.length;
 
@@ -17,8 +19,10 @@ suivant.addEventListener('click', function() {
     etape++;
     if(etape >= nbrImg) {
         etape = 0;
+        
     }
     enleverActiveImages();
+    changeName()
     imgSlider[etape].classList.add('active');
 })
 
@@ -26,16 +30,29 @@ precedent.addEventListener('click', function() {
     etape--;
     if(etape < 0) {
         etape = nbrImg - 1;
+        
     }
     enleverActiveImages();
+    changeName()
     imgSlider[etape].classList.add('active');
+    
 })
 
-//setInterval(function() {
- //   etape++;
- //   if(etape >= nbrImg) {
+
+
+// setInterval(function() {
+//    etape++;
+//    if(etape >= nbrImg) {
 //        etape = 0;
+//        changeName()
 //    }
 //    enleverActiveImages();
+//    changeName()
 //    imgSlider[etape].classList.add('active');
-//}, 3000)
+// }, 2000)
+
+function changeName(){
+const newH2= document.createElement("h2");//creation du h2
+newH2.textContent =devName[etape];//creation du contenu
+dev.append(newH2) ; }//insertion du h2
+

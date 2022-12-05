@@ -80,10 +80,11 @@ main {
 }
 
 main .slider {
-  height: 20rem;
+  height: 25rem;
   width: 100%;
-  margin-bottom: 20%;
+  margin-bottom:1rem;
   margin-right: auto auto;
+  margin-top:5rem
 }
 
 .menu-items a {
@@ -197,23 +198,31 @@ main .slider {
 
 .slider img {
   object-fit: cover;
-  height: 50%;
+  height: 80%;
   width: 50%;
   margin-left: 25%;
-  margin-top: 3rem;
+  margin-top: 5rem;
   position: absolute;
-
+  border-bottom: 3rem  solid var(--button-color) ;
   opacity: 0;
   transition: opacity 0.5s;
+  color: black;
+  text-align: center;
 }
+/* .slider .vignette{
+ height:100%;
+  width: 100%;
+  background-color: red;
+} */
 
 .slider {
-  height: 80vh;
+ 
   position: relative;
 }
 
 .slider img.active {
   opacity: 1;
+  z-index: 5;
 }
 
 .suivant,
@@ -221,7 +230,7 @@ main .slider {
   color: rgb(23, 22, 22);
   font-size: 3rem;
   position: absolute;
-  top: 40%;
+  top: 50%;
 
   cursor: pointer;
 }
@@ -234,21 +243,18 @@ main .slider {
   left: 1rem;
 }
 
-.under-slider {
+ .under-slider {
   width: 50%;
   height: 4rem;
   display: flex;
-  margin-top: 25%;
+  margin-top: -20%;
   justify-content: space-around;
   margin-left: auto;
   margin-right: auto;
+  z-index: 10;
+
 }
-.under-slider .pixiz {
-  width: 2rem;
-  height: 2rem;
-  background-color: chocolate;
-  border-radius: 50%;
-}
+
 .toggle {
   background-color: greenyellow;
 }
