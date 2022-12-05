@@ -2,7 +2,9 @@ let imgSlider = document.getElementsByClassName('imgSlider');
 const dev = document.querySelector(".devName");
 let etape = 0;
 const devName=['Antoine','Cassandra','Laura','David','Pierre'] ;
-changeName()
+const newH2= document.createElement("h2");//creation du h2
+newH2.textContent =devName[0];//creation du contenu
+dev.append(newH2) ;//insertion du h2
 
 let nbrImg = imgSlider.length;
 
@@ -52,7 +54,10 @@ precedent.addEventListener('click', function() {
 // }, 2000)
 
 function changeName(){
+
 const newH2= document.createElement("h2");//creation du h2
 newH2.textContent =devName[etape];//creation du contenu
-dev.append(newH2) ; }//insertion du h2
+dev.append(newH2) ;//insertion du h2 
+dev.firstChild.remove(); 
+}
 
