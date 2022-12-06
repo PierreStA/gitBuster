@@ -1,3 +1,8 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
 :root {
     --backgroundImg: url("/Images/Background-image.jpg");
   
@@ -23,11 +28,7 @@
   
  
   
-  * {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-}
+
   main,
   body {
     height: 100%;
@@ -109,6 +110,7 @@ main.projet {
 
 
 /*boutton repo*/
+
 .gitton {
     font-family: var(--font-family-p);
     font-weight: 500;
@@ -123,6 +125,7 @@ main.projet {
     border: 1px solid var(--button-color);
     text-decoration: none;
     align-items: center;
+    max-width: 40%;
   }
   .gitton:active {
     transform: scale(0.9);
@@ -178,8 +181,8 @@ main.projet {
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 100vh;
-    margin: 0 30px;
+    height: 60vh;
+    margin: 50 30px;
 }
 
 .profile-card {
