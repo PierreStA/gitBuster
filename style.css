@@ -491,12 +491,9 @@ footer {
   .avatar{
     border-radius: 45%;   
     margin-right: 115px;  
-    box-shadow: 10px 10px 5px #888888;
-    transform: scale(0.9);
     
-  }
-
-
+ }
+  
   .title-avatar{
     margin-top:4rem;
     font-size: 2rem;
