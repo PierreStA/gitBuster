@@ -27,11 +27,7 @@
 
 main,
 body {
-<<<<<<< HEAD
-   /*height: 100%; */
-=======
-  /* height: 100%; */
->>>>>>> dev
+  height: 100%; 
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -69,6 +65,7 @@ nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding-right: 1rem;
 }
 
 .toggle {
@@ -76,9 +73,14 @@ nav {
 
 }
 
+
+header ul li::before{
+  display: none;
+}
+
 .menu {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
   align-items: center;
   list-style: none;
   width: 550px;
@@ -90,17 +92,16 @@ nav {
   text-decoration: none;
 }
 
-@media all and (max-width: 991px) {
+@media all and (max-width: 1199px) {
 
   header {
-      
       height: 5rem;
       background-color: #d9d9d9;
   }
 
   .toggle {
-      /* height: 2rem; */
-      /* width: 2rem; */
+       height: 2rem; 
+       width: 2rem; 
       display: block;
       color: rgb(24, 22, 22);
       font-size: 2rem;
@@ -111,8 +112,13 @@ nav {
   .toggle i{
     height:100%;
     width: 100%;
+  
   }
 
+  .fa-times:before {
+    display:block ;
+    color: #ebecee;
+  }
   .logo {
       position: relative;
       z-index: 20;
@@ -141,17 +147,25 @@ nav {
       top: 0;
       left: 0;
       width: 100%;
-      height: 100vh;
+      height: 9rem;
       background: rgb(129, 122, 122);
       flex-direction: column;
-      padding: 2rem;
-      justify-content: space-around;
       transform: translateX(-100%);
-      transition: transform 1s;
+      transition: transform 0.4s;
   }
+ul.menu {
+box-sizing: content-box;
+justify-content: space-evenly;
+height: 90rem;
+margin:0;
+padding:0;
+
+
+}
 
   .menu li a {
       font-size: 2rem;
+      
   }
 
   .open .menu {
@@ -160,19 +174,18 @@ nav {
 }
 
 /*fin nav burger*/
+
 /*slider-caroussel*/
 
-/*fin nav burger*/
-/*slider-caroussel*/
-
+@media all and (max-width: 1199px) {
 .slider img {
   object-fit: cover;
-  height: 80%;
+  /*height: 80%;*/
   width: 50%;
   margin-left: 25%;
   margin-top: 5rem;
   position: absolute;
-  border-bottom: 3rem solid var(--button-color);
+  /*border-bottom: 3rem solid var(--button-color);*/
   opacity: 0;
   transition: opacity 0.5s;
   color: black;
@@ -190,7 +203,10 @@ nav {
 
 .slider img.active {
   opacity: 1;
-  z-index: 5;
+  z-index: 0;
+}
+.fa-chevron-circle-right:before{
+padding-top: 650%;
 }
 
 .suivant,
@@ -213,17 +229,17 @@ nav {
 
 .under-slider {
   width: 50%;
-  height: 4rem;
+  height: 5rem;
   display: flex;
-  margin-top: -2rem;
+  margin-top: 46.5rem;
   margin-bottom: 3rem;
   justify-content: space-around;
   margin-left: auto;
   margin-right: auto;
-  z-index: 10;
-  border-radius: 0 30% 0 30%; 
-   background-color: var(--button-color);
-}
+  z-index: 0;
+  border-radius: 0% 30% 0% 30%;
+  background-color: var(--button-color);
+}}
 
 .container {
   height: 100%;
@@ -268,13 +284,16 @@ ul {
   margin: 0;
 }
 
+
+
+@media all and (max-width: 1199px) {
 /*section-projet*/
 .projet {
   box-shadow: 0px 0px 8px 0px #8d8d8d9f;
   box-sizing: border-box;
   border-top-left-radius: 2rem;
   border-top-right-radius: 2rem;
-  height: 100%;
+  height: 45%;
   width: 100%;
   display: flex;
   flex-wrap: wrap;
@@ -312,7 +331,7 @@ ul {
 
 .gitton:hover {
   box-shadow: var(--shadow);
-}
+}}
 
 h2:nth-of-type(2) {
   margin-top: 2rem;
@@ -365,8 +384,11 @@ input:checked + label {
 
 footer {
   text-align: center;
+  position: fixed;
+  bottom: 0;
+  height: 3rem;
   background-color: var(--accent-light-color);
-  padding: 0.5rem;
+  padding: 0.8rem;
   width: 100%;
   z-index: 1;
 }
