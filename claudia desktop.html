@@ -11,34 +11,37 @@
       href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Philosopher:ital,wght@0,400;0,700;1,400&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="style desktop.css" />
   </head>
   <body>
     <header>
-      <nav>
-        <div class="logo">
-            <img src="Images/Logo1.png" alt="GitBustersLogo" width="175" />
+      <div class="logo">
+        <img src="images/Logo1.png" alt="GitBustersLogo" width="175" />
+      </div>
+      <!--navburger-->
+      <nav class="navbar">
+        <div class="navbar-container container">
+          <input type="checkbox" name="" id="" />
+          <div class="hamburger-lines">
+            <span class="line line1"></span>
+            <span class="line line2"></span>
+            <span class="line line3"></span>
+          </div>
+          <ul class="menu-items">
+            <li><a href="Acceuil">Acceuil</a></li>
+            <li><a href="David">David</a></li>
+            <li><a href="Cassandra">Cassandra</a></li>
+            <li><a href="Pierre">Pierre</a></li>
+            <li><a href="Claudia">Claudia</a></li>
+            <li><a href="Antoine">Antoine</a></li>
+          </ul>
         </div>
-        <div class="toggle">
-            <i class="fas fa-bars open"></i>
-            <i class="fas fa-times close"></i>
-        </div>
-        <ul class="menu">
-            <li><a href="index.html">Acceuil</a></li>
-            <li ><a href="perso_david.html">David</a></li>
-            <li ><a href="perso_cassandra.html">Cassandra</a></li>
-            <li ><a href="perso_pierre.html">Pierre</a></li>
-            <li ><a href="perso_claudia.html">Claudia</a></li>
-            <li ><a href="perso_antoine.html">Antoine</a></li>
-        </ul>
-    </nav>
+      </nav>
     </header>
-    
+    <nav></nav>
     <main>
       <div class="container">
-        <a href="index.html">Acceuil
-        <img class="profil-picture" src="Images/Profil_Pierre.jpg" /></a>
+        <img class="profil-picture" src="Images/Profil_Claudia.jpg" />
         <div class="container-bottom">
           <input id="tab1" type="radio" name="tabs" checked />
           <label for="tab1">A propos</label>
@@ -48,7 +51,7 @@
           <label for="tab3">Me contacter</label>
 
           <section id="content1">
-            <h1>Pierre SAINT-AUBIN</h1>
+            <h1>Claudia Guerrero</h1>
             <p>
               Bacon ipsum dolor sit amet beef venison beef ribs kielbasa.
               Sausage pig leberkas, t-bone sirloin shoulder bresaola.
@@ -68,6 +71,7 @@
               <li>Communication</li>
             </ul>
           </section>
+
           <section id="content2">
             <h1>Professionnels</h1>
             <p>
@@ -88,11 +92,11 @@
           <section id="content3">
             <h1>Mes réseaux</h1>
             <div class="social-links">
-              <a href="https://github.com/PierreStA" target="_blank"
+              <a href="https://github.com/Clauga" target="_blank"
                 ><img src="images/github_icon.png" alt="gitHub icon"
               /></a>
               <a
-                href="https://www.linkedin.com/in/pierre-saint-aubin-31384864/"
+                href="https://www.linkedin.com/in/claudia-guerrero-dev/"
                 target="_blank"
                 ><img src="images/linkedin_icon.png" alt="linkedin icon"
               /></a>
@@ -100,14 +104,14 @@
                 ><img src="images/mail_icon.png" alt="mail icon"
               /></a>
             </div>
+
             <h2 class="second-title">Où me trouver ?</h2>
             <img src="images/map_pierre.jpg" alt="" class="map" />
-            <p>Compans - Toulouse</p>
+            <p>- Toulouse</p>
           </section>
         </div>
       </div>
       <footer>© GITBUSTERS</footer>
     </main>
-    <script src="burger.js"></script>
   </body>
 </html>
