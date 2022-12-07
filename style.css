@@ -82,9 +82,9 @@ main {
 main .slider {
   height: 25rem;
   width: 100%;
-  margin-bottom:1rem;
+  margin-bottom: 1rem;
   margin-right: auto auto;
-  margin-top:5rem
+  margin-top: 5rem;
 }
 
 .menu-items a {
@@ -203,7 +203,8 @@ main .slider {
   margin-left: 25%;
   margin-top: 5rem;
   position: absolute;
-  border-bottom: 3rem  solid var(--button-color) ;
+  border-bottom: 3rem solid var(--button-color);
+  border-radius:0 0 0 27%; ;
   opacity: 0;
   transition: opacity 0.5s;
   color: black;
@@ -216,7 +217,6 @@ main .slider {
 } */
 
 .slider {
- 
   position: relative;
 }
 
@@ -243,16 +243,18 @@ main .slider {
   left: 1rem;
 }
 
- .under-slider {
+.under-slider {
   width: 50%;
   height: 4rem;
   display: flex;
   margin-top: -20%;
+  margin-bottom: 3rem;
   justify-content: space-around;
   margin-left: auto;
   margin-right: auto;
   z-index: 10;
-
+  border-radius:0 30% 0 30%;
+  background-color:var(--button-color);
 }
 
 .toggle {
@@ -434,3 +436,18 @@ footer {
     padding: 15px;
   }
 }
+@media screen and (min-width: 1200px) {
+  .container {
+    display: flex;
+    gap: 5rem;
+    margin: 5rem;
+  }
+  .profil-picture {
+    display: flex;
+    height: 43rem;
+    max-width: 35rem;
+  }
+  .container-bottom {
+    width: 40rem;
+  }
+ 
