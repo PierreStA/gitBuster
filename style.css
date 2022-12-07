@@ -114,7 +114,6 @@ header {
   font-size: 3rem;
   position: absolute;
   top: 50%;
-
   cursor: pointer;
 }
 
@@ -135,10 +134,6 @@ header {
   margin-left: auto;
   margin-right: auto;
   z-index: 10;
-}
-
-.toggle {
-  background-color: greenyellow;
 }
 
 .container {
@@ -239,7 +234,8 @@ ul {
   border: 1px solid var(--button-color);
   text-decoration: none;
   align-items: center;
-  max-width: 40%; /* for desk version*/
+
+/* for desk version*/
 }
 .gitton:active {
   transform: scale(0.9);
@@ -305,6 +301,79 @@ input:checked + label {
   display: flex;
   flex-direction: column;
 }
+
+
+footer {
+  text-align: center;
+  background-color: var(--accent-light-color);
+  padding: 0.5rem;
+  width: 100%;
+  z-index: 1;
+}
+
+.social-links {
+  display: flex;
+}
+
+.social-links a {
+  padding: 1rem;
+  margin-right: 1.5rem;
+  background-color: var(--button-color);
+  border-radius: 100%;
+}
+
+.social-links a:hover {
+  box-shadow: var(--shadow);
+}
+
+.social-links a:active {
+  transform: scale(0.9);
+}
+
+@media screen and (max-width: 650px) {
+  label {
+    font-size: 0.8rem;
+  }
+}
+@media screen and (max-width: 400px) {
+  label {
+    padding: 15px;
+  }
+  .profile-container {
+    display: none;
+  }
+}
+@media screen and (max-width: 1280px) {
+  .profile-name {
+      font-size: 18px;
+  }
+}
+
+@media screen and (max-width: 1280px) {
+  .profile-card {
+      padding: 20px 15px;
+  }
+
+  .profile-name {
+      font-size: 16px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .container {
+    display: flex;
+    gap: 5rem;
+    margin: 5rem;
+  }
+  .profil-picture {
+    display: flex;
+    height: 43rem;
+    max-width: 35rem;
+  }
+  .container-bottom {
+    width: 40rem;
+  }
+
 /*cards*/
 .profile-container {
   display: flex;
@@ -359,83 +428,20 @@ input:checked + label {
   border: 1px solid #999;
   border-radius: 2rem;
 }
-
 .button:hover {
   color: #fff;
   background: #839B97;
   border: 1px solid #839B97;
-}
+ }
+ .gitton {
+  max-width: 40%; 
+ }
 
-@media screen and (max-width: 1280px) {
-  .profile-name {
-      font-size: 18px;
-  }
-}
-
-@media screen and (max-width: 1280px) {
-  .profile-card {
-      padding: 20px 15px;
-  }
-
-  .profile-name {
-      font-size: 16px;
-  }
-}
-
-footer {
-  text-align: center;
-  background-color: var(--accent-light-color);
-  padding: 0.5rem;
-  width: 100%;
-  z-index: 1;
-}
-
-.social-links {
-  display: flex;
-}
-
-.social-links a {
-  padding: 1rem;
-  margin-right: 1.5rem;
-  background-color: var(--button-color);
-  border-radius: 100%;
-}
-
-.social-links a:hover {
-  box-shadow: var(--shadow);
-}
-
-.social-links a:active {
-  transform: scale(0.9);
-}
-
-@media screen and (max-width: 650px) {
-  label {
-    font-size: 0.8rem;
-  }
-}
-@media screen and (max-width: 400px) {
-  label {
-    padding: 15px;
-  }
-  .profile-container {
-    display: none;
-  }
-}
-@media screen and (min-width: 1200px) {
-  .container {
-    display: flex;
-    gap: 5rem;
-    margin: 5rem;
-  }
-  .profil-picture {
-    display: flex;
-    height: 43rem;
-    max-width: 35rem;
-  }
-  .container-bottom {
-    width: 40rem;
-  }
+ html,
+body {
+  font-family: var(--font-family-h1);
+  font-size: 1rem;
+ }
 }
 /* pour les écrans plus petit que 980 pixels : pc 
 @media screen and (max-width: 980px) {
@@ -443,23 +449,3 @@ footer {
       display: none;
   }
 }
-/* pour les écrans plus petit que 840 pixels : ipad horizontal 
-@media screen and (max-width: 840px) {
-  #id {
-      display: none;
-  }
-}
-/* pour les écrans plus petit que 650 pixels : ipad vertical 
-@media screen and (max-width: 650px) {
-  #id {
-      display: none;
-  }
-}
-/* pour les écrans plus petit que 440 pixels : smartphones 
-@media screen and (max-width: 440px) {
-  #id {
-      display: none;
-  }
-}
-*/
-
