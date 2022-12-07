@@ -53,7 +53,7 @@ header {
   height: 5rem;
   background-color: #d9d9d9;
 }
-.logo {
+
   display: flex;
   padding-top: 0.7rem;
 }
@@ -195,7 +195,6 @@ main .slider {
 
 /*fin nav burger*/
 /*slider-caroussel*/
-
 .slider img {
   object-fit: cover;
   height: 80%;
@@ -231,7 +230,6 @@ main .slider {
   font-size: 3rem;
   position: absolute;
   top: 50%;
-
   cursor: pointer;
 }
 
@@ -299,9 +297,9 @@ h1 {
 ul {
   margin: 0;
 }
-
 /*section-projet*/
 .projet {
+
   box-shadow: 0px 0px 8px 0px #8d8d8d9f;
   box-sizing: border-box;
   border-top-left-radius: 2rem;
@@ -329,6 +327,7 @@ ul {
   border: 1px solid var(--button-color);
   text-decoration: none;
   align-items: center;
+
 }
 .gitton:active {
   transform: scale(0.9);
@@ -431,8 +430,101 @@ footer {
   label {
     padding: 15px;
   }
+
+  .profile-container {
+    display: none;
+  }
 }
+@media screen and (max-width: 1280px) {
+  .profile-name {
+      font-size: 18px;
+  }
+}
+
+@media screen and (max-width: 1280px) {
+  .profile-card {
+      padding: 20px 15px;
+  }
+
+  .profile-name {
+      font-size: 16px;
+  }
+}
+
+
 @media screen and (min-width: 1200px) {
+  
+  /*cards*/
+.profile-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 60vh;
+  margin: 50 30px;
+}
+
+.profile-card {
+  flex: 1 1 30%;
+  max-width: 300px;
+  background: #fff;
+  padding: 20px 60px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 0 0 2px 0 #ccc;
+  transition: .3s;
+}
+
+.profile-card:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 25px -5px #ccc;
+}
+
+.profile-icon {
+  height: 15rem;
+  width: 20rem;
+  object-fit: cover;
+
+}
+
+.profile-name {
+  font-size: 24px;
+  font-weight: bold;
+  margin: 25px 0 10px 0;
+  text-align: center;
+}
+
+.profile-position {
+  font-size: 14px;
+  color: #777;
+  font-family: var(--font-family-p);
+}
+
+.button {
+  margin: 40px 0 0 0;
+  padding: 10px 30px;
+  color: #999;
+  text-decoration: none;
+  border: 1px solid #999;
+  border-radius: 2rem;
+}
+.button:hover {
+  color: #fff;
+  background: #839B97;
+  border: 1px solid #839B97;
+ }
+ .gitton {
+  max-width: 40%; 
+ }
+
+}
+/* pour les écrans plus petit que 980 pixels : pc 
+@media screen and (max-width: 980px) {
+  #id {
+      display: none;
+  }
+}
+*/
   .profil-picture {
     height: 43rem;
     max-width: 35rem;
@@ -504,3 +596,4 @@ footer {
     height: 25rem;
   }
 }
+
