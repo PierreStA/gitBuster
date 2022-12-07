@@ -1,5 +1,5 @@
 let imgSlider = document.getElementsByClassName("imgSlider");
-const dev = document.querySelector(".devName");
+const dev = document.querySelector(".dev-name");
 let etape = 0;
 const devName = ["Antoine", "Cassandra", "Claudia", "David", "Pierre"];
 const newH2 = document.createElement("h2"); //creation du h2
