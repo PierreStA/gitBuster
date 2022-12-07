@@ -204,6 +204,7 @@ main .slider {
   margin-top: 5rem;
   position: absolute;
   border-bottom: 3rem solid var(--button-color);
+  border-radius:0 0 0 27%; ;
   opacity: 0;
   transition: opacity 0.5s;
   color: black;
@@ -247,10 +248,13 @@ main .slider {
   height: 4rem;
   display: flex;
   margin-top: -20%;
+  margin-bottom: 3rem;
   justify-content: space-around;
   margin-left: auto;
   margin-right: auto;
   z-index: 10;
+  border-radius:0 30% 0 30%;
+  background-color:var(--button-color);
 }
 
 .toggle {
@@ -446,4 +450,4 @@ footer {
   .container-bottom {
     width: 40rem;
   }
-}
+ 

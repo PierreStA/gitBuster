@@ -1,5 +1,5 @@
 let imgSlider = document.getElementsByClassName("imgSlider");
-const dev = document.querySelector(".devName");
+const dev = document.querySelector(".dev-name");
 let etape = 0;
 const devName = ["Antoine", "Cassandra", "Claudia", "David", "Pierre"];
 const newH2 = document.createElement("h2"); //creation du h2
@@ -37,16 +37,16 @@ precedent.addEventListener("click", function () {
   imgSlider[etape].classList.add("active");
 });
 
-// setInterval(function() {
-//    etape++;
-//    if(etape >= nbrImg) {
-//        etape = 0;
-//        changeName()
-//    }
-//    enleverActiveImages();
-//    changeName()
-//    imgSlider[etape].classList.add('active');
-// }, 2000)
+setInterval(function() {
+   etape++;
+   if(etape >= nbrImg) {
+       etape = 0;
+       changeName()
+   }
+   enleverActiveImages();
+   changeName()
+   imgSlider[etape].classList.add('active');
+}, 2000)
 
 function changeName() {
   const newH2 = document.createElement("h2"); //creation du h2
