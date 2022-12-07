@@ -54,3 +54,5 @@ function changeName() {
   dev.append(newH2); //insertion du h2
   dev.firstChild.remove();
 }
+
+
