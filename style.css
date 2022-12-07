@@ -14,6 +14,7 @@
   --grey-2-color: #999999;
   --validation-color: #54a05c;
   --grey-3-color: #cccccc;
+  --shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 
   --font-family-h1: "Philosopher", sans-serif;
 
@@ -79,10 +80,11 @@ main {
 }
 
 main .slider {
-  height: 20rem;
+  height: 25rem;
   width: 100%;
-  margin-bottom: 20%;
+  margin-bottom: 1rem;
   margin-right: auto auto;
+  margin-top: 5rem;
 }
 
 .menu-items a {
@@ -196,23 +198,31 @@ main .slider {
 
 .slider img {
   object-fit: cover;
-  height: 50%;
+  height: 80%;
   width: 50%;
   margin-left: 25%;
-  margin-top: 3rem;
+  margin-top: 5rem;
   position: absolute;
-
+  border-bottom: 3rem solid var(--button-color);
+  border-radius:0 0 0 27%; ;
   opacity: 0;
   transition: opacity 0.5s;
+  color: black;
+  text-align: center;
 }
+/* .slider .vignette{
+ height:100%;
+  width: 100%;
+  background-color: red;
+} */
 
 .slider {
-  height: 80vh;
   position: relative;
 }
 
 .slider img.active {
   opacity: 1;
+  z-index: 5;
 }
 
 .suivant,
@@ -220,7 +230,7 @@ main .slider {
   color: rgb(23, 22, 22);
   font-size: 3rem;
   position: absolute;
-  top: 40%;
+  top: 50%;
 
   cursor: pointer;
 }
@@ -237,17 +247,16 @@ main .slider {
   width: 50%;
   height: 4rem;
   display: flex;
-  margin-top: 25%;
+  margin-top: -20%;
+  margin-bottom: 3rem;
   justify-content: space-around;
   margin-left: auto;
   margin-right: auto;
+  z-index: 10;
+  border-radius:0 30% 0 30%;
+  background-color:var(--button-color);
 }
-.under-slider .pixiz {
-  width: 2rem;
-  height: 2rem;
-  background-color: chocolate;
-  border-radius: 50%;
-}
+
 .toggle {
   background-color: greenyellow;
 }
@@ -276,6 +285,10 @@ h1,
 h2,
 h3 {
   font-family: var(--font-family-h1);
+  margin-top: 1rem;
+}
+.second-title {
+  margin-top: 2rem;
 }
 
 h1 {
@@ -283,36 +296,58 @@ h1 {
   --font-family-p: "Inter", sans-serif;
 }
 
+.title-project {
+  width: 100%;
+}
+
+ul {
+  margin: 0;
+}
+
 /*section-projet*/
 .projet {
-  box-shadow: 0px 0px 8px 0px #7c7a7a;
-  filter: grayscale(10);
+  box-shadow: 0px 0px 8px 0px #8d8d8d9f;
   box-sizing: border-box;
-  border-top-left-radius: 7%;
-  border-top-right-radius: 7%;
+  border-top-left-radius: 2rem;
+  border-top-right-radius: 2rem;
   height: 100%;
   width: 100%;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   align-content: center;
-  max-width: 65ch;
-  padding-bottom: 6rem;
-  padding-top: 2.5rem;
+  padding: 2rem 2rem 3rem 2rem;
 }
 /*boutton repo*/
 .gitton {
-  margin-top: 2.5rem;
-  padding-bottom: 0.3rem;
-  cursor: pointer;
-  border-radius: 20%;
-  transition-duration: 0.4s;
+  font-family: var(--font-family-p);
+  font-weight: 500;
+  display: flex;
+  padding: 0.5rem 1rem;
   justify-content: center;
-  background-color: #839b97;
+  margin-top: 1rem;
+  cursor: pointer;
+  border-radius: 2rem;
+  transition-duration: 0.4s;
+  background-color: var(--button-color);
+  border: 1px solid var(--button-color);
+  text-decoration: none;
+  align-items: center;
 }
+.gitton:active {
+  transform: scale(0.9);
+}
+.gitton:visited {
+  color: var(--black-color);
+}
+
+.textButton {
+  margin: 0;
+  padding-left: 0.5rem;
+}
+
 .gitton:hover {
-  background-color: #0a0a0a; /* Green */
-  color: #fff;
+  box-shadow: var(--shadow);
 }
 
 h2:nth-of-type(2) {
@@ -384,7 +419,11 @@ footer {
 }
 
 .social-links a:hover {
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  box-shadow: var(--shadow);
+}
+
+.social-links a:active {
+  transform: scale(0.9);
 }
 
 @media screen and (max-width: 650px) {
@@ -397,3 +436,18 @@ footer {
     padding: 15px;
   }
 }
+@media screen and (min-width: 1200px) {
+  .container {
+    display: flex;
+    gap: 5rem;
+    margin: 5rem;
+  }
+  .profil-picture {
+    display: flex;
+    height: 43rem;
+    max-width: 35rem;
+  }
+  .container-bottom {
+    width: 40rem;
+  }
+ 
