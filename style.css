@@ -58,138 +58,109 @@ header {
   padding-top: 0.7rem;
 }
 /*nav burger*/
-
-.menu-items li {
-  list-style: none;
-  margin-left: 1.5rem;
-  margin-bottom: 0.5rem;
-  font-size: 1.2rem;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-a {
-  cursor: pointer;
+
+
+header {
+  height: 5rem;
+  background-color: #d9d9d9;
 }
 
-body {
-  font-family: var(--font-family-p);
-  font-size: 0.9rem;
-}
-
-main {
-  justify-items: center;
-}
-
-main .slider {
-  height: 25rem;
+nav {
   width: 100%;
-  margin-bottom: 1rem;
-  margin-right: auto auto;
-  margin-top: 5rem;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-.menu-items a {
+.toggle {
+  display: none;
+  
+}
+
+.menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  list-style: none;
+  width: 550px;
+}
+
+.menu li a {
+  color: #fff;
   text-decoration: none;
-  color: #444;
-  font-weight: 500;
-  transition: color 0.4s ease-in-out;
 }
 
-@media (max-width: 768px) {
-  .navbar {
-    opacity: 0.95;
+@media all and (max-width: 991px) {
+
+  header {
+      
+      height: 5rem;
+      background-color: #d9d9d9;
   }
 
-  .navbar-container input[type="checkbox"],
-  .navbar-container .hamburger-lines {
-    display: block;
+  .toggle {
+      display: block;
+      color: #fff;
+      font-size: 2rem;
+      padding-right: 1rem;
+      cursor: pointer;
+      position: relative;
+      z-index: 20;
+      
   }
 
-  .navbar-container {
-    display: block;
-    position: relative;
-    height: 64px;
+  .logo {
+      position: relative;
+      z-index: 20;
   }
 
-  .navbar-container input[type="checkbox"] {
-    position: absolute;
-    display: block;
-    height: 32px;
-    width: 30px;
-    top: 20px;
-    right: 20px;
-    z-index: 5;
-    opacity: 0;
+  .ouvrir {
+      display: block;
   }
 
-  .navbar-container .hamburger-lines {
-    display: block;
-    height: 23px;
-    width: 35px;
-    position: absolute;
-    top: 17px;
-    right: 20px;
-    z-index: 2;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+  .fermer {
+      display: none;
   }
 
-  .navbar-container .hamburger-lines .line {
-    display: block;
-    height: 4px;
-    width: 100%;
-    border-radius: 10px;
-    background: #7e7e7e;
+  .open .ouvrir {
+      display: none;
   }
 
-  .navbar-container .hamburger-lines .line1 {
-    transform-origin: 100% 0% 0% 100%;
-    transition: transform 0.4s ease-in-out;
+  .open .fermer {
+      display: block;
   }
 
-  .navbar-container .hamburger-lines .line2 {
-    transition: transform 0.4s ease-in-out;
+  .menu {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100vh;
+      background: rgb(129, 122, 122);
+      flex-direction: column;
+      padding: 2rem;
+      justify-content: space-around;
+      transform: translateX(-100%);
+      transition: transform 1s;
   }
 
-  .navbar-container .hamburger-lines .line3 {
-    transform-origin:100% 0% 0% 100%;
-    transition: transform 0.2s ease-in-out;
+  .menu li a {
+      font-size: 2rem;
   }
 
-  .navbar .menu-items {
-    padding-top: 100px;
-    background: #fff;
-    height: 100vh;
-    max-width: 300px;
-    transform: translate(-150%);
-    display: flex;
-    flex-direction: column;
-    margin-left: -40px;
-    padding-left: 50px;
-    transition: transform 0.4s ease-in-out;
-    box-shadow: 5px 0px 10px 0px #aaa;
+  .btn {
+      font-size: 2rem;
   }
 
-  .navbar .menu-items li {
-    margin-bottom: 1.5rem;
-    font-size: 1.3rem;
-    font-weight: 500;
-  }
-
-  .navbar-container input[type="checkbox"]:checked ~ .menu-items {
-    transform: translateX(0);
-  }
-
-  .navbar-container input[type="checkbox"]:checked ~ .hamburger-lines .line1 {
-    transform: rotate(35deg);
-  }
-
-  .navbar-container input[type="checkbox"]:checked ~ .hamburger-lines .line2 {
-    transform: scaleY(0);
-  }
-
-  .navbar-container input[type="checkbox"]:checked ~ .hamburger-lines .line3 {
-    transform: rotate(-35deg);
+  .open .menu {
+      transform: translateX(0);
   }
 }
 
