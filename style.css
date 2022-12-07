@@ -433,17 +433,74 @@ footer {
   }
 }
 @media screen and (min-width: 1200px) {
-  .container {
-    display: flex;
-    gap: 5rem;
-    margin: 5rem;
-  }
   .profil-picture {
-    display: flex;
     height: 43rem;
     max-width: 35rem;
   }
+
   .container-bottom {
     width: 40rem;
+    background-image: none;
+  }
+
+  label {
+    font-size: 1.2rem;
+  }
+
+  p,
+  li {
+    font-size: 1.3rem;
+  }
+
+  ul {
+    list-style-type: none; /* supprime les puces par défaut */
+    padding: 0.2rem;
+  }
+
+  ul li::before {
+    content: "•";
+    color: var(--button-color); /* définit la couleur des puces */
+    padding-right: 0.5rem;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  .container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    height: 115vh;
+    margin: 5rem;
+  }
+
+  .picture-wrapper {
+    grid-area: 1 / 1 / 2 / 2;
+  }
+  .container-bottom {
+    grid-area: 1 / 2 / 2 / 3;
+  }
+  .avatar-wrapper {
+    grid-area: 2 / 1 / 3 / 3;
+  }
+
+  .avatar {
+    border-radius: 45%;
+    margin-right: 115px;
+  }
+
+  .title-avatar {
+    margin-top: 4rem;
+    font-size: 2rem;
+  }
+  .avatar-wrapper {
+    height: 25rem;
   }
 }
