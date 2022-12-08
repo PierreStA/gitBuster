@@ -105,7 +105,7 @@ header ul li::before {
 }
 
 .menu li a {
-  color: #fff;
+  color: var(--white-color);
   text-decoration: none;
 }
 
