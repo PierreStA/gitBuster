@@ -4,32 +4,51 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>GitBustersProject</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Philosopher:ital,wght@0,400;0,700;1,400&display=swap"
       rel="stylesheet"
     />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <nav></nav>
+    <header>
+      <nav>
+        <div class="logo">
+            <img src="Images/Logo1.png" alt="GitBustersLogo" width="175" />
+        </div>
+        <div class="toggle">
+            <i class="fas fa-bars open"></i>
+            <i class="fas fa-times close"></i>
+        </div>
+        <ul class="menu">
+            <li><a href="index.html">Acceuil</a></li>
+            <li ><a href="perso_david.html">David</a></li>
+            <li ><a href="perso_cassandra.html">Cassandra</a></li>
+            <li ><a href="perso_pierre.html">Pierre</a></li>
+            <li ><a href="perso_claudia.html">Claudia</a></li>
+            <li ><a href="perso_antoine.html">Antoine</a></li>
+        </ul>
+    </nav>
+    </header>
+    
     <main>
       <div class="container">
-        <img class="profil-picture" src="Images/Profil_Pierre.jpg" />
+        <a href="index.html">
+        <img class="profil-picture" src="Images/Profil_Pierre.jpg" /></a>
         <div class="container-bottom">
           <input id="tab1" type="radio" name="tabs" checked />
           <label for="tab1">A propos</label>
-
           <input id="tab2" type="radio" name="tabs" />
           <label for="tab2">Objectifs</label>
-
           <input id="tab3" type="radio" name="tabs" />
           <label for="tab3">Me contacter</label>
 
           <section id="content1">
-            <h1>Pierre Saint-Aubin</h1>
+            <h1>Pierre SAINT-AUBIN</h1>
             <p>
               Bacon ipsum dolor sit amet beef venison beef ribs kielbasa.
               Sausage pig leberkas, t-bone sirloin shoulder bresaola.
@@ -42,14 +61,13 @@
               <li>CSS</li>
               <li>JavaScript</li>
             </ul>
-            <h2>Soft skills</h2>
+            <h2 class="second-title">Soft skills</h2>
             <ul>
               <li>Empathie</li>
               <li>Esprit d'équipe</li>
               <li>Communication</li>
             </ul>
           </section>
-
           <section id="content2">
             <h1>Professionnels</h1>
             <p>
@@ -78,14 +96,18 @@
                 target="_blank"
                 ><img src="images/linkedin_icon.png" alt="linkedin icon"
               /></a>
+              <a href="mailto:" target="_blank"
+                ><img src="images/mail_icon.png" alt="mail icon"
+              /></a>
             </div>
-
-            <h2>Où me trouver ?</h2>
+            <h2 class="second-title">Où me trouver ?</h2>
             <img src="images/map_pierre.jpg" alt="" class="map" />
+            <p>Compans - Toulouse</p>
           </section>
         </div>
       </div>
       <footer>© GITBUSTERS</footer>
     </main>
+    <script src="burger.js"></script>
   </body>
 </html>
