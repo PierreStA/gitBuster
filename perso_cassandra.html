@@ -11,31 +11,36 @@
       href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Philosopher:ital,wght@0,400;0,700;1,400&display=swap"
       rel="stylesheet"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+      integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <header>
-      <div class="logo">
-        <img src="images/Logo1.png" alt="GitBustersLogo" width="175" />
-      </div>
       <!--navburger-->
-      <nav class="navbar">
-        <div class="navbar-container container">
-          <input type="checkbox" name="" id="" />
-          <div class="hamburger-lines">
-            <span class="line line1"></span>
-            <span class="line line2"></span>
-            <span class="line line3"></span>
-          </div>
-          <ul class="menu-items">
-            <li><a href="Acceuil">Acceuil</a></li>
-            <li><a href="David">David</a></li>
-            <li><a href="Cassandra">Cassandra</a></li>
-            <li><a href="Pierre">Pierre</a></li>
-            <li><a href="Claudia">Claudia</a></li>
-            <li><a href="Antoine">Antoine</a></li>
-          </ul>
+      <nav>
+        <div class="logo">
+          <a href="index.html">
+            <img src="Images/Logo1.png" alt="GitBustersLogo" width="175"
+          /></a>
         </div>
+        <div class="toggle">
+          <i class="fas fa-bars open"></i>
+          <i class="fas fa-times close"></i>
+        </div>
+        <ul class="menu">
+          <li><a href="index.html">Acceuil</a></li>
+          <li><a href="perso_david.html">David</a></li>
+          <li><a href="perso_cassandra.html">Cassandra</a></li>
+          <li><a href="perso_pierre.html">Pierre</a></li>
+          <li><a href="perso_claudia.html">Claudia</a></li>
+          <li><a href="perso_antoine.html">Antoine</a></li>
+        </ul>
       </nav>
     </header>
     <nav></nav>
@@ -157,5 +162,6 @@
       </div>
       <footer>© GITBUSTERS</footer>
     </main>
+    <script src="burger.js"></script>
   </body>
 </html>

@@ -77,11 +77,115 @@ main .slider {
   margin-top: 5rem;
 }
 /*nav burger*/
+nav {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-right: 1rem;
+}
 
+.toggle {
+  display: none;
+}
+
+header ul li::before {
+  display: none;
+}
+
+.menu {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  list-style: none;
+  width: 550px;
+  z-index: 1;
+}
+
+.menu li a {
+  color: #fff;
+  text-decoration: none;
+}
+
+@media all and (max-width: 1199px) {
+  header {
+    height: 5rem;
+    background-color: #d9d9d9;
+  }
+
+  .toggle {
+    height: 2rem;
+    width: 2rem;
+    display: block;
+    color: rgb(24, 22, 22);
+    font-size: 2rem;
+    /* padding-right: 2rem; */
+    cursor: pointer;
+    z-index: 20;
+  }
+  .toggle i {
+    height: 100%;
+    width: 100%;
+  }
+
+  .fa-times:before {
+    display: block;
+    color: #ebecee;
+  }
+  .logo {
+    position: relative;
+    z-index: 20;
+  }
+
+  .open {
+    display: block;
+  }
+
+  .close {
+    display: none;
+  }
+
+  .open .open {
+    display: none;
+  }
+
+  .open .close {
+    display: block;
+  }
+
+  .menu {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 9rem;
+    background: rgb(129, 122, 122);
+    flex-direction: column;
+    transform: translateX(-100%);
+    transition: transform 0.4s;
+  }
+  ul.menu {
+    box-sizing: content-box;
+    justify-content: space-evenly;
+    height: 55rem;
+    margin: 0;
+    padding: 0;
+  }
+
+  .menu li a {
+    font-size: 2rem;
+  }
+
+  .open .menu {
+    transform: translateX(0);
+  }
+}
 /*fin nav burger*/
 /*slider-caroussel*/
 
 .slider img {
+  display: none;
   object-fit: cover;
   height: 80%;
   width: 50%;
@@ -93,11 +197,6 @@ main .slider {
   color: black;
   text-align: center;
 }
-/* .slider .vignette{
- height:100%;
-  width: 100%;
-  background-color: red;
-} */
 
 .slider {
   position: relative;
@@ -105,7 +204,7 @@ main .slider {
 
 .slider img.active {
   opacity: 1;
-  z-index: 5;
+  display: block;
 }
 
 .suivant,
@@ -130,12 +229,12 @@ main .slider {
   width: 50%;
   height: 4rem;
   display: flex;
-  margin-top: -4rem;
+  margin-top: 0rem;
   margin-bottom: 3rem;
   justify-content: space-around;
   margin-left: auto;
   margin-right: auto;
-  z-index: 10;
+  /* z-index: 2; */
   border-radius: 0 30% 0 30%;
   background-color: var(--button-color);
 }
@@ -151,7 +250,7 @@ main .slider {
 
 .container-bottom {
   position: relative;
-  z-index: 1;
+  /* z-index: 1; */
   width: 100%;
   height: fit-content;
   border-radius: 1.5rem;
@@ -251,7 +350,7 @@ input {
 label {
   display: inline-flex;
   margin: 0 0 -1px;
-  padding: 15px 25px;
+  padding: 15px 20px;
   font-weight: 600;
   text-align: center;
   color: #bbb;
@@ -284,6 +383,8 @@ footer {
   padding: 0.5rem;
   width: 100%;
   z-index: 1;
+  bottom: 0;
+  position: relative;
 }
 
 .social-links {
@@ -308,6 +409,9 @@ footer {
 .profile-container {
   display: none;
 }
+.avatar-wrapper {
+  display: none;
+}
 
 @media screen and (max-width: 650px) {
   label {
@@ -319,7 +423,11 @@ footer {
     padding: 15px;
   }
 }
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1112px) {
+  body {
+    display: flex;
+    flex-direction: column;
+  }
   .profil-picture {
     height: 43rem;
     max-width: 35rem;
@@ -331,12 +439,12 @@ footer {
   }
 
   label {
-    font-size: 1.2rem;
+    font-size: 1rem;
   }
 
   p,
   li {
-    font-size: 1.3rem;
+    font-size: 1rem;
   }
 
   ul {
@@ -361,10 +469,8 @@ footer {
   .container {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(2, 1fr);
     grid-column-gap: 0px;
     grid-row-gap: 0px;
-    height: 115vh;
     margin: 5rem;
   }
 
@@ -374,21 +480,21 @@ footer {
   .container-bottom {
     grid-area: 1 / 2 / 2 / 3;
   }
-  .avatar-wrapper {
-    grid-area: 2 / 1 / 3 / 3;
-  }
 
   .avatar {
-    border-radius: 45%;
-    margin-right: 115px;
+    border-radius: 65%;
+    margin-right: 4rem;
+    width: auto;
+  }
+  .avatar-wrapper {
+    display: block;
+    grid-area: 2 / 1 / 3 / 3;
+    margin-bottom: 2rem;
   }
 
   .title-avatar {
     margin-top: 4rem;
     font-size: 2rem;
-  }
-  .avatar-wrapper {
-    height: 25rem;
   }
 }
 
