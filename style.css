@@ -51,12 +51,12 @@ img {
 
 header {
   height: 5rem;
-  background-color: rgba(131, 155, 151, 0.62);
+  background-color: rgba(131, 155, 151, 0.742);
 }
 
 .logo {
   display: flex;
-  padding-top: 0.7rem;
+  padding: 0.5rem 0rem 0.5rem 0.5rem;
 }
 a {
   cursor: pointer;
@@ -75,7 +75,6 @@ main .slider {
   width: 100%;
   margin-bottom: 1rem;
   margin-right: auto auto;
-  margin-top: 5rem;
 }
 /*nav burger*/
 nav {
@@ -107,6 +106,12 @@ header ul li::before {
 .menu li a {
   color: var(--white-color);
   text-decoration: none;
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+
+.menu li a:hover {
+  color: var(--main-dark-color);
 }
 
 @media all and (max-width: 1199px) {
@@ -118,7 +123,7 @@ header ul li::before {
     height: 2rem;
     width: 2rem;
     display: block;
-    color: rgb(24, 22, 22);
+    color: var(--black-color);
     font-size: 2rem;
     /* padding-right: 2rem; */
     cursor: pointer;
@@ -209,11 +214,10 @@ header ul li::before {
 
 .suivant,
 .precedent {
-  color: rgb(23, 22, 22);
+  color: var(--main-dark-color);
   font-size: 3rem;
   position: absolute;
   top: 50%;
-
   cursor: pointer;
 }
 
@@ -521,7 +525,7 @@ footer {
     align-items: center;
     justify-content: center;
     height: 60vh;
-    margin: 50 30px;
+    margin-bottom: 4rem;
   }
 
   .profile-card {
@@ -534,7 +538,6 @@ footer {
     align-items: center;
     box-shadow: 0 0 2px 0 #ccc;
     transition: 0.3s;
-    padding: 20px 15px;
   }
 
   .profile-card:hover {
@@ -549,6 +552,7 @@ footer {
   }
 
   .profile-name {
+    font-family: var(--font-family-h1);
     font-size: 24px;
     font-weight: bold;
     margin: 25px 0 10px 0;
